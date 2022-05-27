@@ -12,8 +12,8 @@ class UserHasProductModel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["*"];
     public $table = "user_has_product";
+    protected $fillable = ["*"];
     public $timestamps = false;
 
     /**

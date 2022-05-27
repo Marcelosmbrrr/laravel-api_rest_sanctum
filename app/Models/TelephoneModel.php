@@ -11,12 +11,8 @@ class TelephoneModel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["*"];
-
-    /**
-    * Table
-    */
     public $table = "telephones";
+    protected $fillable = ["*"];
 
     /**
     * Relationship with user table

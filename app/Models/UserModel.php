@@ -16,41 +16,10 @@ class UserModel extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-    * Table
-    *
-    */
     public $table = "users";
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected $fillable = ['name','email','password'];
+    protected $hidden = ['password','remember_token'];
+    protected $casts = ['email_verified_at' => 'datetime'];
 
     /**
     * Relationship with user_has_product table

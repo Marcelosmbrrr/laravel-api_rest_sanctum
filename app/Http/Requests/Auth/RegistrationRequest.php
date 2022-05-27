@@ -11,7 +11,7 @@ class RegistrationRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize() : bool
     {
         return true;
     }
@@ -21,7 +21,7 @@ class RegistrationRequest extends FormRequest
     *
     * @return array
     */
-    public function rules()
+    public function rules() : array
     {
         return [
                 'name' => 'bail|required',
@@ -35,7 +35,7 @@ class RegistrationRequest extends FormRequest
     *
     * @return array
     */
-    public function messages()
+    public function messages() : array
     {
         return [
             'name.required' => 'O nome do usuário deve ser informado',

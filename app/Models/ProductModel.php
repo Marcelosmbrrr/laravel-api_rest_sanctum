@@ -13,22 +13,12 @@ class ProductModel extends Model
 {
     use HasFactory;
 
-    /**
-    * Table
-    *
-    */
     public $table = "products";
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = ["*"];
 
     /**
     * Relationship with user_has_product table
-    */
+    */    
     function user_has_product(){
         return $this->hasMany(UserHasProductModel::class);
     }
